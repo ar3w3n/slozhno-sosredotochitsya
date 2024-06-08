@@ -2,4 +2,91 @@
 
 .page {
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
+  inline-size: 375px;
+  margin: 0 10px;
+  font-family: var(--main-font), sans-serif;
+  color: var(--text-color);
+  background-color: var(--bg-color);
+  /* color bgcolor */
 }
+
+/* header */
+
+.header {
+  background-image: url(../images/cover-image-dark.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.header__theme-menu {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.header__theme-menu-list {
+  list-style-type: none;
+}
+
+.header__theme-menu-button {
+  background: transparent;
+  border: none;
+  color: var(--accent-color);
+  text-transform: lowercase;
+  font-size: 18px;
+}
+
+.header__theme-menu-button_active {
+  border: 1px solid var(--accent-color);
+}
+
+.header__title {
+  font-weight: bold;
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  line-height: 82.5%;
+  color: #db00ff;
+  text-shadow: 4px 4px 0 var(--accent-color);
+}
+
+.title-decor {
+  background-color: var(--accent-color);
+  color: var(--bg-color);
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 123.4%;
+}
+
+/* main */
+
+.section__title {
+  color: var(--accent-color);
+  font: var(--main-font);
+  font-weight: bold;
+}
+
+.section__link {
+  text-shadow: 1px 1px 0 var(--accent-color);
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+.section__link:hover {
+  text-decoration: underline;
+}
+
+.section__link:focus {
+  border: 1px solid var(--text-color);
+}
+
+/* footer */
+
+.footer__title {
+  font-weight: bold;
+  font-size: 116px;
+  line-height: 82.5%;
+  color: #db00ff;
+  text-shadow: 4px 4px 0 var(--accent-color);
+  text-align: center;
+}
+
+
