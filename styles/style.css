@@ -19,6 +19,7 @@
   align-items: start;
   padding: var(--main-padding, 10px);
   block-size: max(100vb, 668px);
+  line-height: 1.825;
 }
 
 .header-decoration {
@@ -245,10 +246,6 @@
 
   .section-gallery .section__subtitle {
     grid-column: span 3;
-  }
-
-  .section-gallery {
-    grid-template-rows: auto 192px 230px 318px;
   }
 
   .section__img:nth-of-type(1),
