@@ -1,6 +1,8 @@
 .page {
   font-family: var(--main-font), sans-serif;
+  font-size: var(--font-size);
   color: var(--text-color);
+  line-height: var(--line-height);
   background-image: var(--background-image);
   background-repeat: no-repeat;
   background-position: center;
@@ -15,26 +17,31 @@
   grid-template-rows: 1fr auto 1fr auto;
   justify-items: end;
   align-items: start;
-  padding: var( --main-padding, 10px);
+  padding: var(--main-padding, 10px);
   block-size: max(100vb, 668px);
 }
 
 .header-decoration {
+  display: flex;
+  gap: 10px;
   position: absolute;
+  align-items: center;
   color: var(--accent-color, #ff0070);
   inset-block-start: var( --main-padding, 10px);
-  inset-inline-end: 19px;
+  inset-inline-end: calc(var(--main-padding) + 9px);
+  line-height: 1.25em;
 }
 
 .header-decoration::after {
   content: '';
   border-radius: 50%;
   background-color: var(--accent-color, #ff0070);
+  filter: drop-shadow(0 0 4px var(--accent-color, #ff0070));
   block-size: 9px;
   inline-size: 9px;
 }
 
-.header::before {
+.decorated-zone::before {
   content: '';
   display: block;
   justify-self: end;
@@ -44,7 +51,7 @@
   inline-size: 25px;
 }
 
-.header::after {
+.decorated-zone::after {
   content: '';
   display: block;
   border-block-end: 1px solid var(--accent-color);
@@ -106,7 +113,6 @@
   color: var(--title-color);
   font-weight: bold;
   font-size: 18px;
-  line-height: 123.4%;
 }
 
 /* main */
@@ -126,6 +132,7 @@
 .section__title {
   color: var(--accent-color);
   font-weight: bold;
+  line-height: 1.234em;
 }
 
 .section__content {
@@ -175,25 +182,6 @@
   block-size: max(100vb, 668px);
 }
 
-.footer::before {
-  content: '';
-  display: block;
-  justify-self: end;
-  border-block-start: 1px solid var(--accent-color);
-  border-inline-end: 1px solid var(--accent-color);
-  block-size: 25px;
-  inline-size: 25px;
-}
-
-.footer::after {
-  content: '';
-  display: block;
-  border-block-end: 1px solid var(--accent-color);
-  border-inline-start: 1px solid var(--accent-color);
-  block-size: 25px;
-  inline-size: 25px;
-}
-
 .footer__title {
   font-weight: bold;
   font-size: 116px;
@@ -220,11 +208,11 @@
   }
 }
 
-:root {
-  --main-padding: 20px;
-}
-
 @media (width >= 768px) {
+  :root {
+    --main-padding: 20px;
+  }
+
   .logo {
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   }
@@ -277,7 +265,7 @@
 @media (width >= 1024px) {
   .header__theme-menu {
     justify-self: center;
-    margin-block-start: 0;
+    margin-block-end: 273px;
   }
 
   .header__theme-menu-list {

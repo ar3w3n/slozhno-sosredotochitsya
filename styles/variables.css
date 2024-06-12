@@ -12,4 +12,6 @@
   --logo-color: #db00ff;
   --main-padding: 10px;
   --background-image: url(../images/cover-image-dark.png);
+  --font-size: 18px;
+  --line-height: 1.234em;
 }

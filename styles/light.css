@@ -1,9 +1,3 @@
-/*
-  Специально для светлой темы при наличии класса.
-  Здесь окажутся стили, которые нужно переопределить принудительно,
-  переключая тему
-*/
-
 .page.theme_light {
   --accent-color: #ff8dcb;
   --title-color: #353430;
@@ -11,4 +5,15 @@
   --hover-button-color: rgba(50, 49, 45, 0.4);
   --logo-color: #ffc2e6;
   --background-image: url(../images/cover-image-light.png);
+}
+
+.page.theme_light .header-decoration {
+  display: none;
+}
+
+.page.theme_light .header__theme-menu-button_active,
+.page.theme_light .header__theme-menu,
+.page.theme_light .decorated-zone::before,
+.page.theme_light .decorated-zone::after {
+  --accent-color: #353430;
 }
