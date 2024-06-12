@@ -2,7 +2,7 @@
   font-family: var(--main-font), sans-serif;
   font-size: var(--font-size);
   color: var(--text-color);
-  line-height: var(--line-height);
+  line-height: 123.4%;
   background-image: var(--background-image);
   background-repeat: no-repeat;
   background-position: center;
@@ -19,7 +19,6 @@
   align-items: start;
   padding: var(--main-padding, 10px);
   block-size: max(100vb, 668px);
-  line-height: 1.825;
 }
 
 .header-decoration {
@@ -30,7 +29,6 @@
   color: var(--accent-color, #ff0070);
   inset-block-start: var( --main-padding, 10px);
   inset-inline-end: calc(var(--main-padding) + 9px);
-  line-height: 1.25em;
 }
 
 .header-decoration::after {
@@ -101,6 +99,7 @@
 
 .header__title {
   justify-self: start;
+  line-height: 82.5%;
 }
 
 .header__text {
@@ -133,7 +132,6 @@
 .section__title {
   color: var(--accent-color);
   font-weight: bold;
-  line-height: 1.234em;
 }
 
 .section__content {
@@ -186,7 +184,6 @@
 .footer__title {
   font-weight: bold;
   font-size: 116px;
-  line-height: 82.5%;
   color: var(--logo-cover);
   text-shadow: 4px 4px 0 var(--accent-color);
   justify-self: center;
@@ -196,7 +193,6 @@
 .logo {
   font-weight: bold;
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
-  line-height: 82.5%;
   color: var(--logo-color, #db00ff);
   text-shadow: 4px 4px 0 var(--accent-color);
 }
