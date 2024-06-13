@@ -42,9 +42,12 @@
   inline-size: 9px;
 }
 
-.decorated-zone::before {
+.header.decorated-zone::before {
   content: '';
   display: block;
+  position: absolute;
+  top: 10px;
+  right: 10px;
   justify-self: end;
   border-block-start: 1px solid var(--accent-color);
   border-inline-end: 1px solid var(--accent-color);
@@ -52,9 +55,12 @@
   inline-size: 25px;
 }
 
-.decorated-zone::after {
+.header.decorated-zone::after {
   content: '';
   display: block;
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
   border-block-end: 1px solid var(--accent-color);
   border-inline-start: 1px solid var(--accent-color);
   block-size: 25px;
@@ -63,6 +69,7 @@
 }
 
 .header__theme-menu {
+  margin-block-start: 75px;
   margin-block-end: 65px;
   height: max-content;
 }
@@ -185,6 +192,26 @@
   block-size: max(100vb, 668px);
 }
 
+.footer.decorated-zone::before {
+  content: '';
+  display: block;
+  justify-self: end;
+  border-block-start: 1px solid var(--accent-color);
+  border-inline-end: 1px solid var(--accent-color);
+  block-size: 25px;
+  inline-size: 25px;
+}
+
+.footer.decorated-zone::after {
+  content: '';
+  display: block;
+  border-block-end: 1px solid var(--accent-color);
+  border-inline-start: 1px solid var(--accent-color);
+  block-size: 25px;
+  inline-size: 25px;
+  justify-self: start;
+}
+
 .footer__title {
   font-weight: bold;
   font-size: 116px;
@@ -214,6 +241,16 @@
     --main-padding: 20px;
   }
 
+  .header.decorated-zone::before {
+    top: 20px;
+    right: 20px;
+  }
+
+  .header.decorated-zone::after {
+    bottom: 20px;
+    left: 20px;
+  }
+
   .logo {
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   }
@@ -227,6 +264,7 @@
   }
 
   .header__text {
+    margin-block-start: 162px;
     max-inline-size: 364px;
   }
 
@@ -268,7 +306,7 @@
 }
 
 @media (width >= 1024px) {
-  .decorated-zone::before {
+  .header.decorated-zone::before {
     position: absolute;
     top: 20px;
     right: 20px;
@@ -277,6 +315,7 @@
   .header__theme-menu {
     position: relative;
     justify-self: center;
+    margin-block-start: 0;
     margin-block-end: 273px;
   }
 
