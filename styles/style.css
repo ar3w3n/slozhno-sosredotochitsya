@@ -268,7 +268,14 @@
 }
 
 @media (width >= 1024px) {
+  .decorated-zone::before {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+
   .header__theme-menu {
+    position: relative;
     justify-self: center;
     margin-block-end: 273px;
   }
