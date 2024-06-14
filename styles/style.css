@@ -286,6 +286,14 @@
     grid-column: 2/4;
   }
 
+  .section-advice .section__title {
+    grid-row: span 2;
+  }
+
+  .section-advice .section__subtitle {
+    grid-column: span 2;
+  }
+
   .section-reduce .section__content {
     grid-column: span 3;
   }
