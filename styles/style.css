@@ -69,7 +69,7 @@
 }
 
 .header__theme-menu {
-  margin-block-start: 75px;
+  margin-block-start: 65px;
   margin-block-end: 65px;
   height: max-content;
 }
@@ -260,6 +260,7 @@
   }
 
   .header__theme-menu {
+    margin-block-start: 172px;
     margin-block-end: 173px;
   }
 
