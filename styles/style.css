@@ -166,6 +166,10 @@
   border: 1px solid var(--text-color);
 }
 
+.regular {
+  font-weight: normal;
+}
+
 /* collage */
 .section-gallery {
   grid-template-rows: auto 142px 355px 237px 355px 237px;
@@ -325,7 +329,9 @@
 
   .header__text {
     margin-block-start: 114px;
+    margin-block-end: 114px;
     max-inline-size: 491px;
+    max-block-size: 71px;
   }
 
   .main-section {
