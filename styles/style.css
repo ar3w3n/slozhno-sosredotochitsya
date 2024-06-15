@@ -43,23 +43,21 @@
   inline-size: 9px;
 }
 
-.header.decorated-zone::before {
+.decorated-zone::before {
   content: '';
   display: block;
-  position: absolute;
+  justify-self: end;
   inset-block-start: 10px;
   inset-inline-end: 10px;
-  justify-self: end;
   border-block-start: 1px solid var(--accent-color, #ff0070);
   border-inline-end: 1px solid var(--accent-color, #ff0070);
   block-size: 25px;
   inline-size: 25px;
 }
 
-.header.decorated-zone::after {
+.decorated-zone::after {
   content: '';
   display: block;
-  position: absolute;
   inset-block-end: 10px;
   inset-inline-start: 10px;
   border-block-end: 1px solid var(--accent-color, #ff0070);
@@ -67,6 +65,11 @@
   block-size: 25px;
   inline-size: 25px;
   justify-self: start;
+}
+
+.header.decorated-zone::before,
+.header.decorated-zone::after {
+  position: absolute;
 }
 
 .header__theme-menu {
@@ -134,7 +137,7 @@
   padding: 40px var( --main-padding, 10px);
 }
 
-.main-section {
+.section {
   display: grid;
   gap: 20px;
 }
@@ -156,11 +159,15 @@
 }
 
 .section__link:hover {
-  text-decoration: underline;
+  border-block-end: 1px solid var(--text-color, #f1b2ce);
 }
 
 .section__link:focus {
-  border: 1px solid var(--text-color, #f1b2ce);
+  outline: none;
+}
+
+.section__link:focus-visible {
+  outline: 1px solid var(--text-color, #f1b2ce);
 }
 
 .regular {
@@ -193,26 +200,6 @@
   block-size: max(100vb, 668px);
 }
 
-.footer.decorated-zone::before {
-  content: '';
-  display: block;
-  justify-self: end;
-  border-block-start: 1px solid var(--accent-color, #ff0070);
-  border-inline-end: 1px solid var(--accent-color, #ff0070);
-  block-size: 25px;
-  inline-size: 25px;
-}
-
-.footer.decorated-zone::after {
-  content: '';
-  display: block;
-  border-block-end: 1px solid var(--accent-color, #ff0070);
-  border-inline-start: 1px solid var(--accent-color, #ff0070);
-  block-size: 25px;
-  inline-size: 25px;
-  justify-self: start;
-}
-
 .footer__title {
   justify-self: center;
   align-self: center;
@@ -234,16 +221,12 @@
 }
 
 @media (width >= 768px) {
-  :root {
-    --main-padding: 20px;
-  }
-
-  .header.decorated-zone::before {
+  .decorated-zone::before {
     inset-block-start: 20px;
     inset-inline-end: 20px;
   }
 
-  .header.decorated-zone::after {
+  .decorated-zone::after {
     inset-block-end: 20px;
     inset-inline-start: 20px;
   }
@@ -271,7 +254,7 @@
     gap: 80px;
   }
 
-  .main-section {
+  .section {
     grid-template-columns: 236px 1fr 1fr;
   }
 
@@ -334,7 +317,7 @@
     max-block-size: 71px;
   }
 
-  .main-section {
+  .section {
     grid-template-columns: repeat(3, 1fr);
   }
 

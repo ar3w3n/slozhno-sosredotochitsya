@@ -30,3 +30,7 @@
 .page.theme_light .decorated-zone::after {
   --accent-color: #353430;
 }
+
+.page.theme_light .section__title {
+  color: var(--title-color);
+}
